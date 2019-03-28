@@ -1,0 +1,380 @@
+/*样式重置*/
+.noscroll,
+.noscroll body {
+    overflow: hidden;
+}
+.noscroll body {
+    position: relative;
+}
+*{
+     -webkit-overflow-scrolling: touch;/*提高ios系统下滚动效果*/
+    -webkit-font-smoothing:antialiased;
+}
+html,body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size:16px;
+    color: #666;
+    box-sizing: border-box;
+    -webkit-touch-callout:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-text-size-adjust:none;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+body,ul,p,h1,h2,h3,div{
+    margin: 0;
+    padding: 0;
+    // font-size: 1em;
+    box-sizing: border-box;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-before: 0;
+    -webkit-padding-after: 0;
+    -webkit-padding-start: 0;
+    -webkit-padding-end: 0;
+    font-weight: normal;
+}
+ul{
+    list-style: none;
+}
+em{
+	font-style: normal;
+}
+select{
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+input, textarea{
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -webkit-appearance:none;
+    margin: 0;
+    outline: none;
+}
+img{
+    border: 0;
+    background: none;
+    vertical-align: top;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+table{
+    width:100%;
+    text-align:center;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+::-webkit-scrollbar{
+    width:0;
+    height:0
+}
+/*颜色*/
+.bg-grey{
+    background: #f5f5f5;
+}
+.bg-white{
+    background: #fff;
+}
+
+/*布局样式*/
+.table-box{
+    display: table;
+    width: 100%;
+}
+.cell{
+    display: table-cell;
+    text-align: left;
+}
+
+.list-box{
+    font-size: 0;
+}
+.list{
+    display: inline-block;
+    font-size: 12px;
+}
+.right{
+    float:right;
+}
+/*内容box*/
+.content,.content-top{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.content{
+    padding-top: 57px;
+    padding-bottom: 60px;
+}
+.content-top{
+    padding-top: 57px;
+}
+
+.scroll{
+    overflow-y: scroll;
+}
+
+.effect{
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        top: 50%;
+        z-index: -1;
+        box-shadow: 0 1px 20px rgba(0,0,0,.2);
+    }
+}
+
+
+/*属性*/
+.property{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 1.2em;
+}
+.parameter-wrapper{
+    margin-bottom: 15px;
+}
+.parameter-wrapper .para-attr{
+    font-size: 1.5em;
+    color: #666;
+    font-weight: 100;
+    margin-bottom: 13px;
+}
+.parameter-wrapper .para-val .list{
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.parameter-wrapper .para-val .list span{
+    display: block;
+    min-width: 60px;
+    height: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    line-height: 40px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid #666;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #666;
+}
+.parameter-wrapper .para-val li input[type='radio'],.parameter-wrapper .para-val li input[type='checkbox']{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.parameter-wrapper .para-val li input:checked + span{
+    background: #C1996A;
+    border: 1px solid #C1996A;
+    color: #fff;
+}
+.parameter-wrapper .para-val li.no span{
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    color: #E5E5E5;
+}
+
+
+@media(-webkit-min-device-pixel-ratio:1.5),(min-device-pixel-ratio:1.5){
+  .border-1px{
+    &::after{
+      -webkit-transform:scaleY(0.7);
+      transform:scaleY(0.7);
+      }
+    }
+}
+
+@media(-webkit-min-device-pixel-ratio:2),(min-device-pixel-ratio:2){
+  .border-1px{
+    &::after{
+      -webkit-transform:scaleY(0.5);
+      transform:scaleY(0.5);
+      }
+    }
+}
+
+.clearfix:after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+
+.tomast{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 276px;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    background-color: #50bfff;
+    box-shadow: 0px 0px 5px rgba(255,255,255,0.5);
+    z-index: 1000;
+    transition:all 1.5s linear;
+    -webkit-transition:all 1.5s linear;
+    transform:translate3d(0,500px,0);
+    -webkit-transform:translate3d(0,500px,0);
+    opacity:0;
+}
+.tomast.success{
+    background-color: #13ce66;
+}
+.tomast.warning{
+    background-color:#f7ba2a;
+}
+.tomast.danger{
+    background-color:#ff4949 ;
+}
+.confirm{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1000;
+    background-color:rgba(0,0,0,0.6);
+}
+.confirmbox{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate3d(-50%,-50%,0);
+    width:300px;
+    height:120px;
+    border-radius:3px;
+    background-color:#fff;
+    padding:20px 15px 50px 15px;
+}
+.msg{
+    line-height:2em;
+    color:#333;
+}
+.confirmBtn,.cancelBtn{
+    position:absolute;
+    bottom:5px;
+    font-size:14px;
+    padding:10px 15px;
+    background:none;
+    border:none;
+    color:#fff;
+    line-height:1em;
+    border-radius:3px;
+}
+
+.confirmBtn{
+    background-color:#20a0ff;
+    border:1px solid #20a0ff;
+    right:15px;
+}
+.cancelBtn{
+    background-color:#fff;  
+    border:1px solid #bfcbd9;
+    color:#1f2d3d;
+    right:95px
+}
+	.slide-left-enter-active{
+		transition:all 0.5s  ease-in;
+		transform: translate3d(0,0,0);
+		opacity: 1;
+		-webkit-transition:all 0.5s linear;
+		-webkit-transform: translate3d(0,0,0);
+	}
+	.slide-left-enter{
+		transform: translate3d(100px,0,0);
+		-webkit-transform: translate3d(100px,0,0);
+		opacity: 0;
+	}
+	.content #distpicker  select{
+		margin-right: 8px ;
+	}
+	.page{
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		box-sizing: border-box;
+		padding-top: 6.25rem;
+		.main-content{
+			flex: 1;
+			.content-main{
+				height: 100%;
+			}
+		}
+	}
+	.price-color{
+		font-family: 'fontNameRegular';
+	}
+	@font-face { 
+		font-family: 'fontNameRegular'; 
+		src: url('../../assets/font/PT DIN Condensed Cyrillic.ttf'); 
+	}
+	
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+		html,body {
+			font-size: 8px !important;
+			webkit-text-size-adjust:none;
+		}
+	}
+	@media only screen and (min-device-width: 1025px) and (max-device-width: 1366px) and (orientation: landscape) {
+		html,body {
+			font-size: 11px !important;
+			webkit-text-size-adjust:none;
+		}
+	}
+	@keyframes scaleimg {
+		0%{
+			// transform: scale(0);
+			opacity: 0;
+		}
+		100%{
+			// transform: scale(1);
+			opacity: 1;
+		}
+	}
+	//尺寸成色弹出窗
+	.opacityLeave-enter-active,.opacityLeave-leave-active{
+		transition: opacity 0.5s ease; 
+	}
+	.opacityLeave-enter,.opacityLeave-leave-active{
+		opacity: 0;
+	}
+
+	.fadeShopping-enter-active,.fadeShopping-leave-active{//购物车购买成功的弹窗
+		transition: all 0.5s ease; 
+	}
+	.fadeShopping-enter,.fadeShopping-leave-active{
+		top: 90%;
+		opacity: 0;
+	}
